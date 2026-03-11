@@ -25,15 +25,14 @@ echo "  → $DIST_DIR/caligrama_extremo.svg"
 echo "  → $DIST_DIR/caligrama_extremo_poster.svg"
 
 echo "=== Step 3: Generating PNG from post-processed SVG ==="
-python3 -c "
-import cairosvg, sys
-cairosvg.svg2png(
-    url='$DIST_DIR/caligrama_extremo.svg',
-    write_to='$DIST_DIR/caligrama_extremo.png',
-    output_width=4000
-)
-print('  → $DIST_DIR/caligrama_extremo.png')
-"
+python3 - "$DIST_DIR" <<'PYEOF'
+import cairosvg, sys, os
+dist_dir = sys.argv[1]
+svg_path = os.path.join(dist_dir, "caligrama_extremo.svg")
+png_path = os.path.join(dist_dir, "caligrama_extremo.png")
+cairosvg.svg2png(url=svg_path, write_to=png_path, output_width=4000)
+print(f"  → {png_path}")
+PYEOF
 
 echo "=== Step 4: Generating HTML viewer ==="
 python3 "$SCRIPTS_DIR/postprocess_caligrama.py" \

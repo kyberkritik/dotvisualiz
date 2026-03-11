@@ -12,8 +12,10 @@ Transforms a raw Graphviz SVG into an expressive visual piece with:
 
 import argparse
 import copy
+import os
 import re
 import sys
+import tempfile
 from lxml import etree
 
 NS = {"svg": "http://www.w3.org/2000/svg", "xlink": "http://www.w3.org/1999/xlink"}
@@ -107,7 +109,7 @@ def get_node_center(g_el):
 
 def build_defs(poster_mode=False):
     """Create <defs> block with filters, gradients, patterns."""
-    defs = etree.SubElement(etree.Element("dummy"), f"{{{SVG_NS}}}defs")
+    defs = etree.Element(f"{{{SVG_NS}}}defs")
 
     # Glow filter for halos
     if not poster_mode:
@@ -350,8 +352,6 @@ def process_svg(input_path, output_path, poster_mode=False):
     tree = etree.parse(input_path, parser)
     root = tree.getroot()
 
-    # Register namespaces (lxml uses _namespace_map on the root)
-    root.nsmap.get(None)  # just a read to keep context
     etree.cleanup_namespaces(root)
 
     # Get SVG dimensions
@@ -773,8 +773,6 @@ def main():
         process_svg(args.input, args.poster, poster_mode=True)
 
     if args.html:
-        # First generate the expressive SVG to a temp location, then embed
-        import tempfile, os
         tmp_svg = os.path.join(tempfile.gettempdir(), "caligrama_html_tmp.svg")
         process_svg(args.input, tmp_svg, poster_mode=False)
         generate_html(tmp_svg, args.html)
