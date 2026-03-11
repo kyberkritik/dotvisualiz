@@ -1,0 +1,233 @@
+digraph CaligramaExtremo {
+
+  graph [
+    layout=neato,
+    overlap=false,
+    splines=curved,
+    outputorder=edgesfirst,
+    bgcolor="#faf7f0",
+    pad=0.35
+  ];
+
+  node [
+    fontname="Helvetica",
+    fontsize=11,
+    shape=ellipse,
+    style="filled,setlinewidth(1.1)",
+    color="#1e1e1e",
+    fillcolor="#fffdf8",
+    margin="0.08,0.05"
+  ];
+
+  edge [
+    fontname="Helvetica",
+    fontsize=9,
+    color="#444444",
+    arrowsize=0.7,
+    penwidth=1.2
+  ];
+
+  // ===== NÚCLEO / PUPILA =====
+  N0 [label="OBSERVACIÓN\nDE 2º ORDEN", shape=doublecircle, pos="0,0!", pin=true, fillcolor="#f2ede1", penwidth=3.0, fontsize=15];
+  N1 [label="sistema /\nentorno", shape=doublecircle, pos="-1.9,-0.3!", pin=true, fillcolor="#f3efe6", penwidth=2.5];
+  N2 [label="comunicación", shape=doublecircle, pos="1.9,-0.3!", pin=true, fillcolor="#f3efe6", penwidth=2.5];
+  N3 [label="medio /\nforma", pos="0,1.8!", pin=true, fillcolor="#f6f1e8", penwidth=2.0];
+  N4 [label="interfaz /\numbral", pos="0,-1.9!", pin=true, fillcolor="#f6f1e8", penwidth=2.0];
+  N5 [label="latencia", pos="-0.9,1.15!", pin=true, fillcolor="#f8f3ec"];
+  N6 [label="emergencia", pos="0.95,1.15!", pin=true, fillcolor="#f8f3ec"];
+  N7 [label="gesto", pos="-0.95,-1.15!", pin=true, fillcolor="#f8f3ec"];
+  N8 [label="uso", pos="0.95,-1.15!", pin=true, fillcolor="#f8f3ec"];
+
+  // ===== MÚSCULO IZQUIERDO / SISTÉMICA =====
+  L0 [label="Luhmann", shape=box, pos="-5.7,-0.1!", pin=true, fillcolor="#dce7ef", penwidth=2.2];
+  L1 [label="Bateson", shape=box, pos="-4.8,1.9!", pin=true, fillcolor="#deeee6", penwidth=2.0];
+  L2 [label="von Foerster", shape=box, pos="-4.1,3.2!", pin=true, fillcolor="#e6eff2"];
+  L3 [label="Maturana", shape=box, pos="-3.0,4.2!", pin=true, fillcolor="#e5eee7"];
+  L4 [label="Varela", shape=box, pos="-1.5,4.9!", pin=true, fillcolor="#e5eee7"];
+  L5 [label="Ashby", shape=box, pos="-4.0,-2.8!", pin=true, fillcolor="#e8eef1"];
+  L6 [label="Esposito", shape=box, pos="-2.4,3.2!", pin=true, fillcolor="#ece7f6"];
+
+  // ===== MÚSCULO DERECHO / SIGNO Y FUGA =====
+  R0 [label="Baudrillard", shape=box, pos="5.8,0.0!", pin=true, fillcolor="#f3dddd", penwidth=2.2];
+  R1 [label="simulacro", pos="4.8,1.8!", pin=true, fillcolor="#faecec"];
+  R2 [label="hiperrealidad", pos="4.0,3.1!", pin=true, fillcolor="#faecec"];
+  R3 [label="fascinación", pos="3.0,4.2!", pin=true, fillcolor="#fbefef"];
+  R4 [label="desasosiego", pos="1.7,4.9!", pin=true, fillcolor="#f8e7e7"];
+
+  D0 [label="Deleuze", shape=box, pos="4.6,-2.0!", pin=true, fillcolor="#e9e2f8", penwidth=2.0];
+  D1 [label="Guattari", shape=box, pos="3.8,-3.5!", pin=true, fillcolor="#e9e2f8", penwidth=2.0];
+  D2 [label="rizoma", pos="2.6,-4.5!", pin=true, fillcolor="#f3effc"];
+  D3 [label="línea de fuga", pos="1.1,-5.1!", pin=true, fillcolor="#f3effc"];
+  D4 [label="agenciamiento", pos="2.4,-2.6!", pin=true, fillcolor="#f3effc"];
+  D5 [label="desterritorialización", pos="0.8,-3.8!", pin=true, fillcolor="#f3effc"];
+
+  // ===== ZONA BAJA / USO - CUERPO =====
+  A0 [label="Agamben", shape=box, pos="-3.6,-4.1!", pin=true, fillcolor="#efe4d5", penwidth=2.1];
+  A1 [label="de Certeau", shape=box, pos="-2.0,-5.0!", pin=true, fillcolor="#f1eadb"];
+  A2 [label="uso de los cuerpos", pos="-0.6,-5.9!", pin=true, fillcolor="#faf4ea"];
+  A3 [label="inoperosidad", pos="-2.8,-6.2!", pin=true, fillcolor="#faf4ea"];
+  A4 [label="potencia", pos="-4.4,-5.5!", pin=true, fillcolor="#faf4ea"];
+  A5 [label="forma-de-vida", pos="-1.9,-6.9!", pin=true, fillcolor="#faf4ea"];
+
+  // ===== ZONA ALTA / ESTÉTICA-TÉCNICA =====
+  T0 [label="Benjamin", shape=box, pos="1.8,5.8!", pin=true, fillcolor="#ddeee8", penwidth=1.9];
+  T1 [label="Simondon", shape=box, pos="0.0,6.5!", pin=true, fillcolor="#deefe8", penwidth=1.9];
+  T2 [label="Haraway", shape=box, pos="-1.8,5.8!", pin=true, fillcolor="#e6f0e7", penwidth=1.8];
+  T3 [label="aura /\nvalor de exposición", pos="3.5,6.9!", pin=true, fillcolor="#eef8f4"];
+  T4 [label="tecnicidad", pos="1.4,7.5!", pin=true, fillcolor="#eef8f4"];
+  T5 [label="individuación", pos="-0.7,7.4!", pin=true, fillcolor="#eef8f4"];
+  T6 [label="simpoiesis", pos="-2.8,6.9!", pin=true, fillcolor="#eef8f4"];
+  T7 [label="archivo /\nconstelación", pos="0.1,8.3!", pin=true, fillcolor="#eef8f4"];
+
+  // ===== LATERAL POLÍTICA / ARTICULACIÓN =====
+  P0 [label="Laclau", shape=box, pos="-7.0,2.2!", pin=true, fillcolor="#efe7d8", penwidth=1.8];
+  P1 [label="Stuart Hall", shape=box, pos="-7.4,0.7!", pin=true, fillcolor="#efe7d8", penwidth=1.8];
+  P2 [label="articulación", pos="-7.8,-0.9!", pin=true, fillcolor="#faf4e8"];
+  P3 [label="hegemonía", pos="-6.6,-2.1!", pin=true, fillcolor="#faf4e8"];
+  P4 [label="plataforma /\ninfraestructura", pos="-7.4,-3.6!", pin=true, fillcolor="#faf4e8"];
+
+  // ===== SALIDA / RESONANCIA =====
+  S0 [label="Rosa", shape=box, pos="6.9,2.4!", pin=true, fillcolor="#e3efe0", penwidth=1.8];
+  S1 [label="resonancia", pos="7.8,3.9!", pin=true, fillcolor="#eff8ec"];
+  S2 [label="relación con el mundo", pos="8.3,2.0!", pin=true, fillcolor="#eff8ec"];
+
+  // ===== TU MAQUINARIA PROPIA =====
+  J0 [label="descomponer\ncomunicaciones en gestos /\nfunciones en usos",
+      shape=hexagon, pos="0,-8.4!", pin=true, fillcolor="#fff2d8", color="#9a6a00", penwidth=3.0, fontsize=13];
+
+  J1 [label="estética de la técnica",
+      shape=hexagon, pos="4.7,6.2!", pin=true, fillcolor="#e8f4ef", color="#2e6b5d", penwidth=2.4, fontsize=12];
+
+  J2 [label="IA como forma chat /\ninterfaz conversacional",
+      shape=hexagon, pos="6.1,-5.0!", pin=true, fillcolor="#ece7fb", color="#5c4d7d", penwidth=2.3, fontsize=12];
+
+  J3 [label="LATENCIA:\noperaciones que se repiten sin verse",
+      shape=hexagon, pos="-5.9,5.8!", pin=true, fillcolor="#f2efe8", color="#505050", penwidth=2.4, fontsize=12];
+
+  J4 [label="1984:\nimaginarios de interfaz /\narchivo cultural",
+      shape=hexagon, pos="6.6,6.0!", pin=true, fillcolor="#f3ece4", color="#7a5d3a", penwidth=2.2, fontsize=12];
+
+  // ===== CONEXIONES NUCLEARES =====
+  N0 -> N1 [color="#1f1f1f", penwidth=3.0];
+  N0 -> N2 [color="#1f1f1f", penwidth=3.0];
+  N0 -> N3 [color="#1f1f1f", penwidth=2.7];
+  N0 -> N4 [color="#1f1f1f", penwidth=2.7];
+  N0 -> N5 [color="#555555", penwidth=2.0, style=dashed];
+  N0 -> N6 [color="#555555", penwidth=2.0, style=dashed];
+  N0 -> N7 [color="#555555", penwidth=2.0, style=dashed];
+  N0 -> N8 [color="#555555", penwidth=2.0, style=dashed];
+
+  N1 -> N2 [label="operación", penwidth=2.2, color="#222222"];
+  N3 -> N4 [label="espesor", penwidth=1.8, color="#222222"];
+  N5 -> N6 [label="maduración", penwidth=1.6, color="#444444"];
+  N7 -> N8 [label="práctica", penwidth=1.6, color="#444444"];
+
+  // ===== FUERZA SISTÉMICA =====
+  L0 -> N1 [label="diferencia", color="#304a5f", penwidth=3.1];
+  L0 -> N2 [label="operación", color="#304a5f", penwidth=3.1];
+  L0 -> N0 [label="observador", color="#304a5f", penwidth=2.8];
+  L1 -> N6 [label="patrón", color="#35624b", penwidth=2.4];
+  L1 -> J3 [label="ecología", color="#35624b", penwidth=2.2];
+  L2 -> N0 [label="2º orden", color="#4e6773", penwidth=2.1];
+  L3 -> N1 [label="autopoiesis", color="#4d6d54", penwidth=2.0];
+  L4 -> N4 [label="enacción", color="#4d6d54", penwidth=2.0];
+  L6 -> N5 [label="contingencia", color="#665a83", penwidth=1.8];
+
+  // ===== SIGNO / CLAUSURA =====
+  R0 -> R1 [color="#8c3d3d", penwidth=3.0];
+  R1 -> R2 [color="#8c3d3d", penwidth=2.8];
+  R2 -> R3 [color="#8c3d3d", penwidth=2.4];
+  R3 -> R4 [color="#8c3d3d", penwidth=2.2];
+  R0 -> N0 [label="provoca sospecha", color="#8c3d3d", penwidth=2.0, style=dashed];
+  N0 -> R4 [label="enfría", color="#444444", penwidth=1.8, style=dashed];
+
+  // ===== FUGA / MÁQUINA =====
+  D0 -> D2 [color="#6546a5", penwidth=2.6];
+  D1 -> D4 [color="#6546a5", penwidth=2.6];
+  D2 -> D3 [color="#6546a5", penwidth=2.4];
+  D4 -> D5 [color="#6546a5", penwidth=2.1];
+  D3 -> N8 [label="microdesvío", color="#6b58a5", penwidth=1.9, style=dotted];
+  D3 -> J0 [label="uso táctico", color="#6b58a5", penwidth=1.7, style=dotted];
+  D4 -> J2 [label="ensambla", color="#6546a5", penwidth=1.9];
+  D0 -> N3 [label="forma ↔ multiplicidad", color="#6546a5", penwidth=1.8, style=dashed];
+
+  // ===== USO / CUERPO =====
+  A0 -> A2 [color="#8b6a2f", penwidth=2.8];
+  A0 -> A3 [color="#8b6a2f", penwidth=2.5];
+  A0 -> A4 [color="#8b6a2f", penwidth=2.2];
+  A2 -> A5 [color="#8b6a2f", penwidth=2.0];
+  A1 -> N8 [label="tácticas", color="#92794f", penwidth=1.8];
+  A0 -> N7 [label="cuerpo", color="#8b6a2f", penwidth=2.0];
+  A0 -> J0 [label="impulso", color="#8b6a2f", penwidth=2.2];
+  L0 -> A0 [label="función ↔ uso", color="#6d5b3a", penwidth=2.4];
+
+  // ===== ESTÉTICA / TÉCNICA =====
+  T0 -> T3 [color="#2e6b5d", penwidth=2.0];
+  T0 -> T7 [color="#2e6b5d", penwidth=1.9];
+  T1 -> T4 [color="#2e6b5d", penwidth=2.1];
+  T1 -> T5 [color="#2e6b5d", penwidth=2.1];
+  T2 -> T6 [color="#41754a", penwidth=2.0];
+  T7 -> J4 [label="montaje", color="#2e6b5d", penwidth=1.8];
+  T1 -> J1 [label="objeto técnico", color="#2e6b5d", penwidth=1.8];
+  T0 -> J1 [label="imagen", color="#2e6b5d", penwidth=1.8];
+  T2 -> N6 [label="hacer-con", color="#41754a", penwidth=1.7, style=dashed];
+
+  // ===== POLÍTICA / ARTICULACIÓN =====
+  P0 -> P2 [color="#7a6740", penwidth=2.0];
+  P1 -> P2 [color="#7a6740", penwidth=2.0];
+  P2 -> P3 [color="#7a6740", penwidth=1.9];
+  P3 -> P4 [color="#7a6740", penwidth=1.7];
+  P2 -> L0 [label="diferencia ↔ articulación", color="#7a6740", penwidth=1.7, style=dashed];
+  P4 -> N4 [label="infraestructura visible", color="#7a6740", penwidth=1.5];
+
+  // ===== RESONANCIA / SALIDA =====
+  S0 -> S1 [color="#4b7a4d", penwidth=2.1];
+  S0 -> S2 [color="#4b7a4d", penwidth=2.0];
+  S1 -> R4 [label="reabre", color="#4b7a4d", penwidth=1.9, style=dashed];
+  S0 -> N0 [label="salida no ingenua", color="#4b7a4d", penwidth=1.7, style=dashed];
+
+  // ===== TU MAQUINARIA =====
+  J0 -> N7 [color="#9a6a00", penwidth=3.0];
+  J0 -> N8 [color="#9a6a00", penwidth=3.0];
+  J0 -> N2 [label="relectura", color="#9a6a00", penwidth=2.4];
+  J0 -> L0 [label="contra/desde", color="#9a6a00", penwidth=2.0];
+  J1 -> J4 [label="archivo sensible", color="#2e6b5d", penwidth=1.7];
+  J2 -> N4 [label="umbral", color="#5c4d7d", penwidth=2.0];
+  J2 -> N0 [label="sujeto-interfaz", color="#5c4d7d", penwidth=1.8];
+  J3 -> N5 [label="lo no visto", color="#505050", penwidth=1.9];
+  J4 -> R0 [label="pantalla", color="#7a5d3a", penwidth=1.5];
+  J4 -> T0 [label="constelación", color="#7a5d3a", penwidth=1.7];
+
+  // ===== TRAZOS CALIGRAMÁTICOS / OJO-COMETA =====
+  X1 [label="", shape=point, width=0.05, pos="-8.6,0.0!", pin=true, color="#d3cab9"];
+  X2 [label="", shape=point, width=0.05, pos="-6.6,4.6!", pin=true, color="#d3cab9"];
+  X3 [label="", shape=point, width=0.05, pos="-3.3,7.8!", pin=true, color="#d3cab9"];
+  X4 [label="", shape=point, width=0.05, pos="0.0,9.2!", pin=true, color="#d3cab9"];
+  X5 [label="", shape=point, width=0.05, pos="3.4,7.8!", pin=true, color="#d3cab9"];
+  X6 [label="", shape=point, width=0.05, pos="6.7,4.6!", pin=true, color="#d3cab9"];
+  X7 [label="", shape=point, width=0.05, pos="8.8,0.0!", pin=true, color="#d3cab9"];
+  X8 [label="", shape=point, width=0.05, pos="6.7,-4.6!", pin=true, color="#d3cab9"];
+  X9 [label="", shape=point, width=0.05, pos="3.3,-7.8!", pin=true, color="#d3cab9"];
+  X10 [label="", shape=point, width=0.05, pos="0.0,-9.3!", pin=true, color="#d3cab9"];
+  X11 [label="", shape=point, width=0.05, pos="-3.3,-7.8!", pin=true, color="#d3cab9"];
+  X12 [label="", shape=point, width=0.05, pos="-6.7,-4.6!", pin=true, color="#d3cab9"];
+
+  X1 -> X2 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X2 -> X3 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X3 -> X4 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X4 -> X5 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X5 -> X6 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X6 -> X7 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X7 -> X8 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X8 -> X9 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X9 -> X10 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X10 -> X11 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X11 -> X12 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+  X12 -> X1 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
+
+  // ===== VECTORES OBLICUOS =====
+  L1 -> D0 [label="ecología ↔ fuga", color="#5b6a65", penwidth=1.5, style=dashed];
+  T1 -> J2 [label="tecnicidad ↔ chat", color="#486b67", penwidth=1.5, style=dashed];
+  R0 -> J2 [label="pantalla ↔ interfaz", color="#7c5858", penwidth=1.4, style=dashed];
+  A3 -> D3 [label="desactivar ↔ fugar", color="#7b5a5a", penwidth=1.4, style=dashed];
+}
