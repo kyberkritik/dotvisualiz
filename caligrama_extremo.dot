@@ -41,11 +41,11 @@ digraph CaligramaExtremo {
   // ===== MÚSCULO IZQUIERDO / SISTÉMICA =====
   L0 [label="Luhmann", shape=box, pos="-5.7,-0.1!", pin=true, fillcolor="#dce7ef", penwidth=2.2];
   L1 [label="Bateson", shape=box, pos="-4.8,1.9!", pin=true, fillcolor="#deeee6", penwidth=2.0];
-  L2 [label="von Foerster", shape=box, pos="-4.1,3.2!", pin=true, fillcolor="#e6eff2"];
+  L2 [label="von Foerster", shape=box, pos="-4.2,3.8!", pin=true, fillcolor="#e6eff2"];
   L3 [label="Maturana", shape=box, pos="-3.0,4.2!", pin=true, fillcolor="#e5eee7"];
   L4 [label="Varela", shape=box, pos="-1.5,4.9!", pin=true, fillcolor="#e5eee7"];
   L5 [label="Ashby", shape=box, pos="-4.0,-2.8!", pin=true, fillcolor="#e8eef1"];
-  L6 [label="Esposito", shape=box, pos="-2.4,3.2!", pin=true, fillcolor="#ece7f6"];
+  L6 [label="Esposito", shape=box, pos="-2.3,2.4!", pin=true, fillcolor="#ece7f6"];
 
   // ===== MÚSCULO DERECHO / SIGNO Y FUGA =====
   R0 [label="Baudrillard", shape=box, pos="5.8,0.0!", pin=true, fillcolor="#f3dddd", penwidth=2.2];
@@ -58,16 +58,16 @@ digraph CaligramaExtremo {
   D1 [label="Guattari", shape=box, pos="3.8,-3.5!", pin=true, fillcolor="#e9e2f8", penwidth=2.0];
   D2 [label="rizoma", pos="2.6,-4.5!", pin=true, fillcolor="#f3effc"];
   D3 [label="línea de fuga", pos="1.1,-5.1!", pin=true, fillcolor="#f3effc"];
-  D4 [label="agenciamiento", pos="2.4,-2.6!", pin=true, fillcolor="#f3effc"];
-  D5 [label="desterritorialización", pos="0.8,-3.8!", pin=true, fillcolor="#f3effc"];
+  D4 [label="agenciamiento", pos="3.1,-2.4!", pin=true, fillcolor="#f3effc"];
+  D5 [label="desterritorialización", pos="0.4,-4.4!", pin=true, fillcolor="#f3effc"];
 
   // ===== ZONA BAJA / USO - CUERPO =====
   A0 [label="Agamben", shape=box, pos="-3.6,-4.1!", pin=true, fillcolor="#efe4d5", penwidth=2.1];
   A1 [label="de Certeau", shape=box, pos="-2.0,-5.0!", pin=true, fillcolor="#f1eadb"];
   A2 [label="uso de los cuerpos", pos="-0.6,-5.9!", pin=true, fillcolor="#faf4ea"];
-  A3 [label="inoperosidad", pos="-2.8,-6.2!", pin=true, fillcolor="#faf4ea"];
-  A4 [label="potencia", pos="-4.4,-5.5!", pin=true, fillcolor="#faf4ea"];
-  A5 [label="forma-de-vida", pos="-1.9,-6.9!", pin=true, fillcolor="#faf4ea"];
+  A3 [label="inoperosidad", pos="-3.2,-6.6!", pin=true, fillcolor="#faf4ea"];
+  A4 [label="potencia", pos="-4.6,-5.3!", pin=true, fillcolor="#faf4ea"];
+  A5 [label="forma-de-vida", pos="-2.1,-7.5!", pin=true, fillcolor="#faf4ea"];
 
   // ===== ZONA ALTA / ESTÉTICA-TÉCNICA =====
   T0 [label="Benjamin", shape=box, pos="1.8,5.8!", pin=true, fillcolor="#ddeee8", penwidth=1.9];
@@ -226,8 +226,8 @@ digraph CaligramaExtremo {
   X12 -> X1 [arrowhead=none, color="#d3cab9", penwidth=1.5, style=dotted];
 
   // ===== VECTORES OBLICUOS =====
-  L1 -> D0 [label="ecología ↔ fuga", color="#5b6a65", penwidth=1.5, style=dashed];
-  T1 -> J2 [label="tecnicidad ↔ chat", color="#486b67", penwidth=1.5, style=dashed];
-  R0 -> J2 [label="pantalla ↔ interfaz", color="#7c5858", penwidth=1.4, style=dashed];
+  L1 -> D0 [label="ecología ↔ fuga", lp="-3.0,0.2", color="#5b6a65", penwidth=1.5, style=dashed];
+  T1 -> J2 [label="tecnicidad ↔ chat", lp="1.8,3.8", color="#486b67", penwidth=1.5, style=dashed];
+  R0 -> J2 [label="pantalla ↔ interfaz", lp="7.0,-3.2", color="#7c5858", penwidth=1.4, style=dashed];
   A3 -> D3 [label="desactivar ↔ fugar", color="#7b5a5a", penwidth=1.4, style=dashed];
 }

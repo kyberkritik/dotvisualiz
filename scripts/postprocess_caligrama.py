@@ -285,6 +285,11 @@ def style_edge(g_el, edge_id, poster_mode=False):
             el.set("font-size", "9.5")
             el.set("font-style", "italic")
             el.set("fill", "#3a3a3a")
+            # Halo detrás del texto para legibilidad sobre aristas cruzadas
+            el.set("stroke", "#faf7f0")
+            el.set("stroke-width", "3.5")
+            el.set("stroke-linejoin", "round")
+            el.set("paint-order", "stroke fill")
 
 
 # ── Halo / ghost orbit layer ────────────────────────────────────────
