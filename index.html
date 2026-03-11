@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dotvisualiz — Cartografía Visual</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #f5f1e8;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    color: #1a1a18;
+  }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    padding: 3rem 2rem 2rem;
+    border-bottom: 1px solid #d6cdb8;
+    background: linear-gradient(180deg, #faf7f0 0%, #f5f1e8 100%);
+    text-align: center;
+  }
+
+  .site-header h1 {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+    color: #1a1a18;
+  }
+
+  .site-header p {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #5a5040;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+
+  .header-rule {
+    width: 48px;
+    height: 2px;
+    background: #b8a88a;
+    border: none;
+    margin: 1.4rem auto 0;
+  }
+
+  /* ─── MAIN GRID ─── */
+  .grid-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8a7e6a;
+    margin: 0 0 1.8rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* ─── CARD ─── */
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: #faf7f0;
+    border: 1px solid #d6cdb8;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  }
+
+  .card:hover {
+    border-color: #1a1a18;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+    transform: translateY(-2px);
+  }
+
+  .card-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #eee9dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #d6cdb8;
+    overflow: hidden;
+  }
+
+  /* Miniature constructivist SVG diagram as placeholder thumbnail */
+  .card-thumb svg {
+    width: 80%;
+    height: 80%;
+    opacity: 0.65;
+  }
+
+  .card-body {
+    padding: 1.2rem 1.4rem 1.4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .card-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #8a7e6a;
+  }
+
+  .card-title {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #1a1a18;
+    margin: 0;
+  }
+
+  .card-desc {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #5a5040;
+    margin: 0.2rem 0 0;
+    flex: 1;
+  }
+
+  .card-arrow {
+    margin-top: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    color: #1a1a18;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.2s;
+  }
+
+  .card:hover .card-arrow {
+    gap: 0.8rem;
+  }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    text-align: center;
+    padding: 1.4rem;
+    font-size: 0.72rem;
+    color: #8a7e6a;
+    border-top: 1px solid #d6cdb8;
+    background: #f0ece3;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+  }
+
+  .site-footer a {
+    color: #5a5040;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>dotvisualiz</h1>
+  <p>Cartografía visual · diagramática · sociocibernética</p>
+  <hr class="header-rule">
+</header>
+
+<main class="grid-section">
+  <p class="section-label">Proyectos</p>
+
+  <div class="grid">
+
+    <!-- CARD: Caligrama Extremo -->
+    <a class="card" href="dist/caligrama_extremo.html">
+      <div class="card-thumb">
+        <!-- Abstract constructivist thumbnail -->
+        <svg viewBox="0 0 200 112" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="200" height="112" fill="#eee9dd"/>
+          <!-- ghost orbits -->
+          <circle cx="100" cy="56" r="48" fill="none" stroke="#c8bfa8" stroke-width="0.6" stroke-dasharray="4,6" opacity="0.5"/>
+          <circle cx="100" cy="56" r="30" fill="none" stroke="#c8bfa8" stroke-width="0.6" stroke-dasharray="3,5" opacity="0.4"/>
+          <!-- halo -->
+          <circle cx="100" cy="56" r="16" fill="#d6cdb8" opacity="0.35"/>
+          <!-- core node -->
+          <ellipse cx="100" cy="56" rx="14" ry="14" fill="#f2ede1" stroke="#1a1a18" stroke-width="1.5"/>
+          <!-- satellite nodes -->
+          <ellipse cx="52" cy="48" rx="9" ry="9" fill="#dce7ef" stroke="#304a5f" stroke-width="1"/>
+          <ellipse cx="152" cy="48" rx="9" ry="9" fill="#f3dddd" stroke="#8c3d3d" stroke-width="1"/>
+          <ellipse cx="78" cy="88" rx="9" ry="9" fill="#e9e2f8" stroke="#6546a5" stroke-width="1"/>
+          <ellipse cx="128" cy="88" rx="9" ry="9" fill="#efe4d5" stroke="#8b6a2f" stroke-width="1"/>
+          <ellipse cx="100" cy="20" rx="7" ry="7" fill="#ddeee8" stroke="#2e6b5d" stroke-width="1"/>
+          <!-- edges -->
+          <line x1="86" y1="52" x2="61" y2="50" stroke="#304a5f" stroke-width="0.8" opacity="0.7"/>
+          <line x1="114" y1="52" x2="143" y2="50" stroke="#8c3d3d" stroke-width="0.8" opacity="0.7"/>
+          <line x1="92" y1="68" x2="83" y2="81" stroke="#6546a5" stroke-width="0.8" opacity="0.7"/>
+          <line x1="108" y1="68" x2="122" y2="81" stroke="#8b6a2f" stroke-width="0.8" opacity="0.7"/>
+          <line x1="100" y1="42" x2="100" y2="27" stroke="#2e6b5d" stroke-width="0.8" opacity="0.7"/>
+          <!-- machine node (hexagon) -->
+          <polygon points="100,3 107,7 107,14 100,18 93,14 93,7" fill="#fff2d8" stroke="#9a6a00" stroke-width="0.8" opacity="0.8" transform="translate(0,13)"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Graphviz · SVG · Sociocibernética</span>
+        <h2 class="card-title">Caligrama Extremo</h2>
+        <p class="card-desc">
+          Cartografía sociocibernética interactiva. Nodos conceptuales, familias cromáticas, órbitas fantasma y animaciones de respiración. Pensamiento visual maquínico.
+        </p>
+        <span class="card-arrow">Abrir diagrama →</span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  dotvisualiz · <a href="https://github.com/kyberkritik/dotvisualiz" target="_blank" rel="noopener">github.com/kyberkritik/dotvisualiz</a>
+</footer>
+
+</body>
+</html>
